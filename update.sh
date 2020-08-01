@@ -1,26 +1,7 @@
 #!/bin/sh
 
-SRC="-----BEGIN PGP MESSAGE-----
-
-hQIMAwwrltQGJlzeARAAmfIJHadmxP4Ykvb8pRitX2OqVlfZqQ4Prtx2WedVLx0h
-H+fmXgRRqT6rDlgoiJkqD80ThGDPnCTeq0R+bY/oG2PE1DUEtfnRSoZuSDJerckY
-JZd+Roia/3F3Hl3+1LdemTAXLUV8UYzXhhw7R8qsfEJBR6TaxpfH6BuQkOhmuNe8
-Dgk0C8iD5Ph8xCtzDAzzAqEN5OV6LOLcht82F+3jywbX+0L8hQucgKdYyD4zdMZz
-1wBtSGOY5lDeTefjxG2K3VRH/LmhT3YoscsghVa9aQLMSOLxo2wLJlBiRjGRVcLw
-ziRNWdTRDIT8D91oJOfDDxHr9fgISykrT9Dobu09YVq0ToQwXUo6f968AAt0b87e
-FNFPKriklzU4bjOkJv8WdhYAU57tru6oM+txVY6THhm6Kmqo85xWcVdk6G9XnsZQ
-rmQ41g5aUJfEehKE7oILJG2XKg8RHaGpL3PCsxov7MGKueqjrPs884UGutDDP66h
-BFoBG4aeTAMY+u7/sFauPvxTJ/aPDwcTRlHEVcLvuLD2tZtu8Z4znr8I3hkyF2AJ
-GvOFDaoq3BnwMEn9DY3DWGFRXwvLkUW5hQQh88mX00PJD4EpBUGj6o+bT/dT/8vy
-PykOkmC2UsRGcwzzaZ0B56euVgsDirX2F4k+/ZAyHrY7CTxLfayBL9evaDJmxGvS
-wBwBKX/+nhjhS//y072LGDtt+VcFzWa9hhXd393KS3BzoC/CZ7yqwGbXy/8vy13L
-uxlr0YSna96YVrIm6x5zIKnoBLvjquVvaVPchm3ek7r3yc2nScY5jDSIkoCM8XC4
-qsXVCrFkrFxsm1DXRWaG82mVSOS/OkfZ7tNVqiejAQ5BSs7JOgZXbAt+EWVBrSTF
-rmWWoOoJBNELyj4FdoRPht9tgcKYFspKQ8FxeL5wR1oh+3LxVRMtLqJT7D8sBMzQ
-wWOX/SNyughbv5+Eg3T9fLFJb4oToq/cfflQioQb
-=eGIW
------END PGP MESSAGE-----"
-
-echo "$SRC" > update_actually.sh
-gpg --decrypt update_actually.sh | sh
-rm update_actually.sh
+curl -L "https://docs.google.com/spreadsheets/d/1gug657PzPp4B8tfHHsZ9BEcAFihkFIBDBHtJ-O_pWdQ/export?format=csv" -o google-form.csv
+python3 update.py
+rm google-form.csv
+git add index.html
+git commit -m "ran update.sh @ $(date)"
