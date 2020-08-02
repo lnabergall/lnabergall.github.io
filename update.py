@@ -9,15 +9,18 @@ MARKER_BEGIN = "        <!--MARKER_BEGIN-->\n"
 MARKER_END = "        <!--MARKER_END-->\n"
 TEMPLATE = """
         <!-- %s -->
-        <div class="row">
-          <div class="col s8">
-            <p class="quote">
-            %s
-            </p>
-            <p class="author">%s</p>
+        <div class="row fact">
+          <div class="col s8 push-s2">
+            <div class="quote">
+              <span>
+                %s
+              </span>
+            </div>
+            <div class="author">
+              <span>%s</span>
+            </div>
           </div>
         </div>
-
 """
 
 google_form = [l.decode('utf-8') for l in urlopen(URL).readlines()]
@@ -39,7 +42,7 @@ with open('index.html', 'r') as f:
         elif not skip:
             lines.append(line)
         else:
-            print(line)
+            print(line, end="")
 
     html = "".join(lines)
 
