@@ -12,6 +12,7 @@ TEMPLATE = """
         <div class="row fact">
           <div class="col s8 push-s2">
             <div class="quote">
+              <span class="label">%d. </span>
               <span>
                 %s
               </span>
@@ -25,8 +26,8 @@ TEMPLATE = """
 
 google_form = [l.decode('utf-8') for l in urlopen(URL).readlines()]
 output = "".join([MARKER_BEGIN] + [
-    TEMPLATE % (t,fact,author)
-    for (t,author,fact) in csv.reader(google_form[1:])
+    TEMPLATE % (t,i+1,fact,author)
+    for i,(t,author,fact) in enumerate(csv.reader(google_form[1:]))
 ] + [MARKER_END])
 
 html = ""
