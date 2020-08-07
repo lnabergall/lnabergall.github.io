@@ -25,7 +25,7 @@ TEMPLATE = """
 """
 
 html_escape = lambda s: s.replace("'","&#39;").replace("\"","&quot;")
-google_form = [l.decode('utf-8') for l in urlopen(URL).readlines()]
+google_form = [l.decode('utf-8', 'replace') for l in urlopen(URL).readlines()]
 output = "".join([MARKER_BEGIN] + [
     TEMPLATE % (t,i+1,html_escape(fact),author)
     for i,(t,author,fact) in enumerate(csv.reader(google_form[1:]))
