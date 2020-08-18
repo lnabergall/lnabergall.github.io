@@ -1,0 +1,60 @@
+body {
+    padding-top: 0px; 
+    padding-bottom: 50px;
+}
+
+h1.display-4 {
+    text-align: center; 
+    padding: 20px 50px;
+}
+
+label {
+    font-size: 1.125rem;
+}
+
+button.close {
+    font-family: serif;
+}
+
+.navbar-brand.compressed {
+    font-size: 1.35rem;
+}
+
+@media (min-width: 850px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+    }
+    .navbar-brand {
+        font-size: 2.5em;
+    }
+}
+@media (max-width: 849px) {
+    .navbar-brand {
+        font-size: 1.8em;
+    }
+}
+@media (max-width: 669px) {
+    .navbar-brand {
+        font-size: 1.35em;
+    }
+}
+
+.state-facts {
+    padding-top: 125px;
+}
+
+.quote {
+    font-size: 1.125rem;
+    font-family: "Noto Serif JP", serif;
+    font-style: italic;
+}
+
+.author {
+    text-align: right;
+    font-family: "Noto Serif JP";
+}
+
+.fact {
+    padding-bottom: 1.25rem;
+}
