@@ -117,5 +117,3 @@ StateFactManager.prototype.place_fact = function(state_fact, fact_template) {
 };
 
 new StateFactApp($("#state-facts-app"));
-
-
