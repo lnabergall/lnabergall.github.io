@@ -52,11 +52,10 @@ StateFactApp.prototype.store_fact = function(event, state_fact) {
             reject_alert.addClass("d-none");
         });
     };
-    this.db_ref.push().set(state_fact.to_json_ready()).then(
+    this.db_ref.push(state_fact.to_json_ready()).then(
         accept_func.bind(this), reject_func.bind(this));
 };
 
-// make sure this is actually working
 // change to list new facts first
 // add filtering by state
 // try to quickly tweak theme
