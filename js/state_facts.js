@@ -56,7 +56,6 @@ StateFactApp.prototype.store_fact = function(event, state_fact) {
         accept_func.bind(this), reject_func.bind(this));
 };
 
-// change to list new facts first
 // add filtering by state
 // try to quickly tweak theme
 // then basically done for now? 
@@ -88,7 +87,7 @@ var StateFactManager = function(node, db_ref) {
 StateFactManager.prototype.view_fact = function(fact_snapshot, prev_fact_key) {
     var state_fact = from_json_ready(fact_snapshot.val());
     if (!state_fact.pinned) this.fact_index += 1;
-   this.place_fact(state_fact, this.render_fact(state_fact));
+    this.place_fact(state_fact, this.render_fact(state_fact));
 };
 
 StateFactManager.prototype.render_fact = function(state_fact) {
@@ -108,11 +107,12 @@ StateFactManager.prototype.render_fact = function(state_fact) {
 };
 
 StateFactManager.prototype.place_fact = function(state_fact, fact_template) {
-    // default to simply placing in the state-facts container
+    // default to simply placing in the state-facts container, at the 'front'
+    var last_pinned = this.node.find(".fact.pinned").last();
     if (state_fact.pinned) {
         this.node.prepend(fact_template);
     } else {
-        this.node.append(fact_template);
+        last_pinned.after(fact_template);
     }
 };
 
