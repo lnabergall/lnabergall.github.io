@@ -94,13 +94,13 @@ StateFactManager.prototype.render_fact = function(state_fact) {
     var template = this.fact_template.clone();
     var fact_element = template.find(".text").first();
     var author_element = template.find(".author").first();
-    fact_element.html("<p>" + state_fact.fact + "</p>");
+    
     if (state_fact.pinned) {
+        fact_element.html(`<p> ${state_fact.fact} </p>`);
         template.addClass("pinned");
     } else {
         template.removeClass("pinned");
-        fact_element.find("p").prepend(
-            "<span>" + this.fact_index.toString(10) + ". </span>");
+        fact_element.html(`<p> <span> ${this.fact_index.toString(10)}. </span> ${state_fact.fact} </p>`);
     }
     author_element.text(state_fact.author_name);
     return template;
