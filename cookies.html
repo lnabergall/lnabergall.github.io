@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- The Sigma that no one asked for -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <!-- Compiled and minified CSS -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap"
+    />
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous"
+    />
+
+    <!-- katex for math -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+        integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+        crossorigin="anonymous"
+    />
+
+    <!-- site stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Cookie Time</title>
+
+  </head>
+
+  <body>
+
+    <div id="state-facts-app">
+
+      <nav class="navbar navbar-light fixed-top bg-light">
+        <div class="container-lg">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">pre cookie time is competition time</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-lg state-facts">
+        <div class="row">
+          <div class="col-md-8">
+            <p>
+              name, time
+              <p>announcements</p>
+            </p>
+
+          </div>
+          <div class="col-md-4">
+            <h5>Rules</h5>
+            <p>
+              The first person to post cookie time annoucements between <code>1700</code>
+              to <code>1730</code> on Tuesdays or Fridays gets points equal to \(m^{2}\)
+              where \(m\) is the number of minutes past <code>1700</code> at the time of
+              annoucement.
+            </p>
+
+            <h5>Leaderboard</h5>
+            <table>
+              <thead>
+                <tr>
+                  <td style="width: 5rem;">points</td>
+                  <td>who</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>kel</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>tim</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap -->
+    <!-- Compiled and minified JavaScript -->
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"
+    ></script>
+
+    <!-- for katex -->
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+      integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBOkFvTQ8GkhLn-ZyftF7D2CIYgUWOXyqg",
+        authDomain: "algebraiccombinators.firebaseapp.com",
+        databaseURL: "https://algebraiccombinators.firebaseio.com",
+        projectId: "algebraiccombinators",
+        storageBucket: "algebraiccombinators.appspot.com",
+        messagingSenderId: "898615619622",
+        appId: "1:898615619622:web:a9d127e58d3b37c02736e7",
+        measurementId: "G-P4HXSXCKL3",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <!-- site functions -->
+    <script src="js/animation.js"></script>
+    <script src="js/state_facts.js"></script>
+
+  </body>
+
+</html>
