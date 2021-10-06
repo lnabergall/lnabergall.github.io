@@ -1,138 +1,209 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- The Sigma that no one asked for -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- Bootstrap -->
     <!-- Compiled and minified CSS -->
     <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap"
     />
     <link
-        rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-        crossorigin="anonymous"
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
     />
 
     <!-- katex for math -->
     <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
-        integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
-        crossorigin="anonymous"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+      integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+      crossorigin="anonymous"
     />
 
     <!-- site stylesheet -->
-    <link rel="stylesheet" href="css/main.css">
-
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      td:first-child {
+        width: 5em;
+      }
+    </style>
     <title>Cookie Time</title>
-
   </head>
 
   <body>
-
     <div id="state-facts-app">
-
       <nav class="navbar navbar-light fixed-top bg-light">
         <div class="container-lg">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">pre cookie time is competition time</a>
+            <a class="navbar-brand" href="#">Cookies Leaderboard</a>
           </div>
         </div>
       </nav>
 
       <div class="container-lg state-facts">
         <div class="row">
-          <div class="col-md-8">
-            <p>
-              <code>Mar. 30 @ 5:30pm</code>
-            <p>Nick: cookie time in about as long as it takes to find serbia on a map of serbia</p>
-            </p>
-            <p>
-              <code>Mar. 26 @ 5:24pm</code>
-            <p>Lukas: <a href="https://www.youtube.com/watch?v=Ye8mB6VsUHw"><code>https://www.youtube.com/watch?v=Ye8mB6VsUHw</code></a></p>
-            </p>
-            <p>
-              <code>Mar. 16 @ 5:10pm</code>
-            <p>Kel: There is an old Polish proverb that says "read the whole library, my child, but cookies time still taste sweet after four days."</p>
-            </p>
-            <p>
-              <code>Mar. 12 @ 5:05pm</code>
-            <p>Tim: I get points equal to the number of minutes until cookie time.</p>
-            </p>
-            <p>
-              <code>Mar.  9 @ 5:01pm</code>
-            <p>Kel: mirror mirror on the wall<br>who is the most competitive cookie time annoucer of them all? </p>
-            </p>
-          </div>
-          <div class="col-md-4">
-            <h5>Rules</h5>
-            <p>
-              The first person to post cookie time annoucements between <code>1700</code>
-              to <code>1730</code> on Tuesdays or Fridays gets points equal to \(m^{2}\)
-              where \(m\) is the number of minutes past <code>1700</code> at the time of
-              annoucement.
-            </p>
-
-            <h5>Leaderboard</h5>
+          <div class="col-md-6">
+            <h5>Battle Royal</h5>
             <table>
-              <thead>
-                <tr>
-                  <td style="width: 5rem;">points</td>
-                  <td>who</td>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
-                  <td>\(30^{2}\)</td>
-                  <td>nick</td>
+                  <td>2</td>
+                  <td>Mathieu</td>
                 </tr>
                 <tr>
-                  <td>\(24^{2}\)</td>
-                  <td>lukas</td>
+                  <td>0</td>
+                  <td>James</td>
                 </tr>
                 <tr>
-                  <td>\(10^{2}+1^{2}\)</td>
-                  <td>kel</td>
+                  <td>0</td>
+                  <td>Mama Lukas</td>
                 </tr>
                 <tr>
-                  <td>\(5^{2}\)</td>
-                  <td>tim</td>
+                  <td>14</td>
+                  <td>bananalpaca</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>Not my email address</td>
+                </tr>
+                <tr>
+                  <td>34</td>
+                  <td>Flowerpower</td>
+                </tr>
+                <tr>
+                  <td>31</td>
+                  <td>Me</td>
+                </tr>
+                <tr>
+                  <td>22</td>
+                  <td>optimal benis</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>Desmond the moonbear</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Ben</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>roger walters</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Ronen</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>Val</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>Fernanda</td>
                 </tr>
               </tbody>
             </table>
           </div>
+
+          <div class="col-md-6">
+            <h5>10 seconds, no move, no pan, no zoom, no look no scope</h5>
+            <table>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mathieu</td>
+                </tr>
+                <tr>
+                  <td>N/A</td>
+                  <td>James</td>
+                </tr>
+                <tr>
+                  <td>N/A</td>
+                  <td>Mama Lukas</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>bananalpaca</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Not my email address</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>Flowerpower</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Me</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Tim</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Desmond the moonbear</td>
+                </tr>
+                <tr>
+                  <td>N/A</td>
+                  <td>Ben</td>
+                </tr>
+                <tr>
+                  <td>N/A</td>
+                  <td>roger walters</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Ronen</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>Val</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>Fernanda</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p></p>
+            <p>Highest points: Desmond the moonbear 16596</p>
+          </div>
         </div>
-
       </div>
-
     </div>
 
     <!-- Bootstrap -->
     <!-- Compiled and minified JavaScript -->
     <script
-        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
     ></script>
     <script
-        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
     ></script>
     <script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
     ></script>
 
     <!-- for katex -->
@@ -182,7 +253,5 @@
     <!-- site functions -->
     <script src="js/animation.js"></script>
     <script src="js/state_facts.js"></script>
-
   </body>
-
 </html>
